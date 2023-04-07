@@ -115,18 +115,77 @@ Kita dapat menggunakan query diatas untuk melihat isi keseluruhan dari tabel kit
 Sebagai contoh, gambar diatas adalah hasil dari query (Select * From seller). Query tersebut menunjukkan isi dari tabel seller.
 
 ## Retrieve Data
+
 Retrieve data atau pengambilan data adalah proses mengidentifikasi dan mengekstraksi data dari basis data, berdasarkan kueri yang diberikan oleh pengguna atau aplikasi. Retrieve data dibagi menjadi 2, yaitu transactional query dan analytical query
+
 1. Transactional Query
 Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, dan price dari tabel car_product dengan kriteria year lebih besar sama dengan 2015.
+
+![image](https://user-images.githubusercontent.com/118685091/230658154-56e4534d-f1a6-49cb-8848-7bffc81fbdfd.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658167-9ff861ea-2114-4ac0-8834-2aca08721724.png)
+
 Query dibawah digunakan untuk memasukkan data kedalam tabel bid dengan value (90, 1, 2, '2022–02–14', 215000000, 220000000, 'sent') secara berurutan kedalam kolom tabel bid
+
+![image](https://user-images.githubusercontent.com/118685091/230658190-6f7fccb6-a3f3-48a0-bd4a-89a6b6020512.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658204-32363e83-f6b7-4c46-a481-429962967b19.png)
+
 Query dibawah digunakan untuk menampilkan product_id, brand, model, year, price, date_post dari tabel seller yang digabung dengan tabel car_product dengan kriteria nama seller = 'Masha Branscomb' dengan urutan dari tanggal terbaru
-Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, dan price dari tabel car_product dengan kriteria model memiliki kata 'Yaris' dan diurutkan dari yang harga yang termurah
-Function dibawah digunakan untuk menghitung jarak antar satu kota dengan kota lainnya. Function dibawah disimpan dengan nama 'distance', yang akan digunakan untuk query selanjutnya
+
+![image](https://user-images.githubusercontent.com/118685091/230658228-9ebaa94a-85dc-44cb-9861-b04d8d90aff3.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658246-52dba3dd-d94f-4ede-9300-3abcb0aa37c9.png)
+
+Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, dan price dari tabel car_product dengan kriteria model memiliki kata 'Yaris' dan diurutkan dari yang harga yang termurah.
+
+![image](https://user-images.githubusercontent.com/118685091/230658268-3bdc6e2e-4b31-40a3-822e-0d09b50cede7.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658286-31ce8cfc-a02d-45b3-a3e1-9ab05d58f751.png)
+
+Function dibawah digunakan untuk menghitung jarak antar satu kota dengan kota lainnya. Function dibawah disimpan dengan nama 'distance', yang akan digunakan untuk query selanjutnya.
+
+![image](https://user-images.githubusercontent.com/118685091/230658299-0b3b7533-a837-4f42-b28a-04ef13d11578.png)
+
 Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, price dari tabel car_product, dan function distance yang telah dibuat sebelumnya. Didalam function distance akan memuat dua titik kota yang akan dihitung jaraknya, yang pertama adalah kota dari seller, dan yang kedua adalah kota dari car_product. Kriteria untuk kota adalah kota_id = 3173.
+
+![image](https://user-images.githubusercontent.com/118685091/230658321-193378a4-fc24-440b-a27e-4894b465a7d2.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658334-cf6b4594-fb96-457a-b14f-5919158489d7.png)
+
 2. Analytical Query
-Materialized View dibawah digunakan untuk menghitung jumlah produk dari masing masing model yang tersedia dalam car_product. Materialized View tersebut disimpan dengan nama jumlah_model dan akan digunakan pada query selanjutnya
+Materialized View dibawah digunakan untuk menghitung jumlah produk dari masing masing model yang tersedia dalam car_product. Materialized View tersebut disimpan dengan nama jumlah_model dan akan digunakan pada query selanjutnya.
+
+![image](https://user-images.githubusercontent.com/118685091/230658407-b3ccc354-a3db-4e5d-b6c9-3d552000d40b.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658420-b8876def-4005-43be-a661-5ba55b9ce880.png)
+
 Query dibawah digunakan untuk menampilkan model, count_product, dan count_bid. Query tersebut menggabungkan tabel car_product dengan tabel bid, dan materialized view yang telah dibuat sebelumnya, yang kemudian digroup dengan model dan count_product dan diurutkan secara ascending berdasarkan count_bid.
-Query dibawah digunakan untuk menampilkan kolom nama_kota, brand, model, year, price, dan avg_car_city yang merupakan rata rata harga mobil per kota dari tabel car_product. Query tersebut menggabungkan tabel car_product, seller dan location yang kemudian digroup menggunakan nama_kota, brand, model, year, dan price, dan diurutkan secara ascending menggunakan avg_car_city
+
+![image](https://user-images.githubusercontent.com/118685091/230658435-081ad2df-d3d7-4d6a-81e8-f4df5f28f1d0.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658440-5850179b-3a92-4eea-8cd1-c44f5b2dc419.png)
+
+Query dibawah digunakan untuk menampilkan kolom nama_kota, brand, model, year, price, dan avg_car_city yang merupakan rata rata harga mobil per kota dari tabel car_product. Query tersebut menggabungkan tabel car_product, seller dan location yang kemudian digroup menggunakan nama_kota, brand, model, year, dan price, dan diurutkan secara ascending menggunakan avg_car_city.
+
+![image](https://user-images.githubusercontent.com/118685091/230658464-a856ac0f-dc4d-4276-8e46-1447ccd64e31.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658479-73ca02a3-9f87-4aab-a5cd-884b77af29e1.png)
+
 Query dibawah digunakan untuk menampilkan kolom model, user_id, first_bid_date, next_bid_date, first_bid_price, dan next_bid_price. Query tersebut menggabungkan tabel car_product dengan tabel bid agar mendapatkan harga dan tanggal bid. Pada query tersebut kolom next_bid_date dan next_bid_kosong tidak terisi (null) karena masing masing mobil hanya di bid satu kali saja dengan orang yang sama.
-Query dibawah digunakan untuk menampilkan model, avg_price , dan avg_bid_6month. Query dibawah menggabungkan tabel car_product dan tabel bid. avg_price berisi rata-rata harga mobil yang digroup dengan model mobil tersebut. avg_bid_6month berisi rata rata harga bid selama 6 bulan terhadap mobil dan model yang telah digroup sebelumnya
+
+![image](https://user-images.githubusercontent.com/118685091/230658497-73b6ac79-9b64-42fc-b1cf-b76bd3dbc615.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658502-f101a9d5-c9a0-4e27-b81e-1672d825fdf2.png)
+
+Query dibawah digunakan untuk menampilkan model, avg_price , dan avg_bid_6month. Query dibawah menggabungkan tabel car_product dan tabel bid. avg_price berisi rata-rata harga mobil yang digroup dengan model mobil tersebut. avg_bid_6month berisi rata rata harga bid selama 6 bulan terhadap mobil dan model yang telah digroup sebelumnya
+
+![image](https://user-images.githubusercontent.com/118685091/230658524-2a457b9e-c5d3-41f7-a45e-e4bb4c898ea1.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658530-632f60cc-c457-4e05-8a0f-01ca260ec11a.png)
+
 Query dibawah digunakan untuk menampilkan kolom brand, model, rata-rata dari bulan 1 sampai bulan 6 secara terpisah. Query tersebut menggunakan CASE untuk membagi kolom rata-rata bid tersebut sesuai dengan bulan dilakukannya bid. Query tersebut juga membatasi produk yang ditampilkan, yaitu hanya model 'Toyota Yaris' saja.
+
+![image](https://user-images.githubusercontent.com/118685091/230658559-93ecfcda-86bb-4949-af88-757c3ad38238.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230658571-ae661ae3-a197-422b-a407-f3f0941d5811.png)
