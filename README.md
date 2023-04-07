@@ -24,6 +24,7 @@ Location: -
 
 4. Determine Business Rules
 Dalam tahap ini, field-field yang telah dibuat perlu diaplikasikan constrain.
+
 Seller: seller_id int NOT NULL
  product_id int NOT NULL FOREIGN KEY
  kota_id int NOT NULL FOREIGN KEY
