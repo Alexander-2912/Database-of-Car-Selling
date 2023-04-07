@@ -26,10 +26,15 @@ Location: -
 Dalam tahap ini, field-field yang telah dibuat perlu diaplikasikan constrain.
 
 * Seller: seller_id int NOT NULL
+
  product_id int NOT NULL FOREIGN KEY
+
  kota_id int NOT NULL FOREIGN KEY
+ 
  nama VARCHAR(40) NOT NULL
+ 
  email VARCHAR(40) NOT NULL
+ 
  no_telp VARCHAR(40) NOT NULL
  
 * Bid: bid_id int PRIMARY KEY
