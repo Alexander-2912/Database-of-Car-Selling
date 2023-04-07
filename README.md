@@ -154,6 +154,7 @@ Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, 
 ![image](https://user-images.githubusercontent.com/118685091/230658334-cf6b4594-fb96-457a-b14f-5919158489d7.png)
 
 2. Analytical Query
+
 Materialized View dibawah digunakan untuk menghitung jumlah produk dari masing masing model yang tersedia dalam car_product. Materialized View tersebut disimpan dengan nama jumlah_model dan akan digunakan pada query selanjutnya.
 
 ![image](https://user-images.githubusercontent.com/118685091/230658407-b3ccc354-a3db-4e5d-b6c9-3d552000d40b.png)
