@@ -27,51 +27,51 @@ Dalam tahap ini, field-field yang telah dibuat perlu diaplikasikan constrain.
 
 * Seller: seller_id int NOT NULL
 
- product_id int NOT NULL FOREIGN KEY
+  product_id int NOT NULL FOREIGN KEY
 
- kota_id int NOT NULL FOREIGN KEY
+  kota_id int NOT NULL FOREIGN KEY
  
- nama VARCHAR(40) NOT NULL
+  nama VARCHAR(40) NOT NULL
  
- email VARCHAR(40) NOT NULL
+  email VARCHAR(40) NOT NULL
  
- no_telp VARCHAR(40) NOT NULL
+  no_telp VARCHAR(40) NOT NULL
  
 * Bid: bid_id int PRIMARY KEY
 
- user_id int NOT NULL
+  user_id int NOT NULL
  
- product_id int NOT NULL FOREIGN KEY
+  product_id int NOT NULL FOREIGN KEY
  
- bid_date DATE NOT NULL
+  bid_date DATE NOT NULL
  
- price int NOT NULL
+  price int NOT NULL
  
- bid_price int NOT NULL
+  bid_price int NOT NULL
  
- bid_status VARCHAR(20) NOT NULL
+  bid_status VARCHAR(20) NOT NULL
  
 * Car_product: product_id int PRIMARY KEY
 
- kota_id int NOT NULL FOREIGN KEY
+  kota_id int NOT NULL FOREIGN KEY
  
- brand VARCHAR(40) NOT NULL
+  brand VARCHAR(40) NOT NULL
  
- model VARCHAR(40) NOT NULL
+  model VARCHAR(40) NOT NULL
  
- body_type VARCHAR(40) NOT NULL
+  body_type VARCHAR(40) NOT NULL
  
- year int NOT NULL
+  year int NOT NULL
  
- price int NOT NULL
+  price int NOT NULL
  
- date_post DATE NOT NULL
+  date_post DATE NOT NULL
  
 * Location: kota_id int PRIMARY KEY
 
- nama_kota VARCHAR(40) NOT NULL
+  nama_kota VARCHAR(40) NOT NULL
  
- kordinat POINT NOT NULL
+  kordinat POINT NOT NULL
 
 5. Implementing a Relational Database
 Tahap terakhir dalam mendesain database adalah membuat sebuah Entity Relationship Diagram atau yang sering disebut juga dengan ERD. Fungsi dari Entity Relationship Diagram adalah untuk menunjukkan tabel, field, relasi, key, serta constraint yang telah dibuat pada tahap sebelumnya.
