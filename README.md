@@ -38,24 +38,39 @@ Dalam tahap ini, field-field yang telah dibuat perlu diaplikasikan constrain.
  no_telp VARCHAR(40) NOT NULL
  
 * Bid: bid_id int PRIMARY KEY
+
  user_id int NOT NULL
+ 
  product_id int NOT NULL FOREIGN KEY
+ 
  bid_date DATE NOT NULL
+ 
  price int NOT NULL
+ 
  bid_price int NOT NULL
+ 
  bid_status VARCHAR(20) NOT NULL
  
 * Car_product: product_id int PRIMARY KEY
+
  kota_id int NOT NULL FOREIGN KEY
+ 
  brand VARCHAR(40) NOT NULL
+ 
  model VARCHAR(40) NOT NULL
+ 
  body_type VARCHAR(40) NOT NULL
+ 
  year int NOT NULL
+ 
  price int NOT NULL
+ 
  date_post DATE NOT NULL
  
 * Location: kota_id int PRIMARY KEY
+
  nama_kota VARCHAR(40) NOT NULL
+ 
  kordinat POINT NOT NULL
 
 5. Implementing a Relational Database
