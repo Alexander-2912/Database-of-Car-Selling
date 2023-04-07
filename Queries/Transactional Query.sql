@@ -46,16 +46,16 @@ END;
 $$ LANGUAGE plpgsql;
 
 SELECT product_id, brand, model, year, price, distance((SELECT location.kordinat 
-													  FROM seller
-													  JOIN location 
-													  ON seller.kota_id = location.kota_id
-													  WHERE seller.kota_id = 3173 LIMIT 1
-													  ),
-													 (SELECT location.kordinat 
-													  FROM car_product
-													  JOIN location 
-													  ON car_product.kota_id = location.kota_id
-													  WHERE car_product.kota_id = 3173 LIMIT 1
-													  ))
+							FROM seller
+							JOIN location 
+							ON seller.kota_id = location.kota_id
+							WHERE seller.kota_id = 3173 LIMIT 1
+							),
+							(SELECT location.kordinat 
+							FROM car_product
+							JOIN location 
+							ON car_product.kota_id = location.kota_id
+							WHERE car_product.kota_id = 3173 LIMIT 1
+							))
 FROM car_product
 WHERE kota_id = 3173;
