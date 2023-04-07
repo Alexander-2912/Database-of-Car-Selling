@@ -57,6 +57,9 @@ kordinat POINT NOT NULL
 
 5. Implementing a Relational Database
 Tahap terakhir dalam mendesain database adalah membuat sebuah Entity Relationship Diagram atau yang sering disebut juga dengan ERD. Fungsi dari Entity Relationship Diagram adalah untuk menunjukkan tabel, field, relasi, key, serta constraint yang telah dibuat pada tahap sebelumnya.
+
+![image](https://user-images.githubusercontent.com/118685091/230657229-4d070401-55f7-47cf-9b66-747ddfb13955.png)
+
 Setelah membuat Entity Relationship Diagram, kita dapat mulai menggunakan Data Definition Language di pgAdmin4 untuk membuat tabel, field, relasi, key, dan constraint yang konsepnya sudah dibuat dalam bentuk ERD.
 Setelah kita membuat query Data Definition Language, query-query tersebut dapat kita run dan kemudian akan terbentuk tabel-tabel beserta dengan atributnya.
 
