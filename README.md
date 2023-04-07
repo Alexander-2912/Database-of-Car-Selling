@@ -25,14 +25,14 @@ Location: -
 4. Determine Business Rules
 Dalam tahap ini, field-field yang telah dibuat perlu diaplikasikan constrain.
 
-Seller: seller_id int NOT NULL
+*Seller: seller_id int NOT NULL
  product_id int NOT NULL FOREIGN KEY
  kota_id int NOT NULL FOREIGN KEY
  nama VARCHAR(40) NOT NULL
  email VARCHAR(40) NOT NULL
  no_telp VARCHAR(40) NOT NULL
  
-Bid: bid_id int PRIMARY KEY
+*Bid: bid_id int PRIMARY KEY
  user_id int NOT NULL
  product_id int NOT NULL FOREIGN KEY
  bid_date DATE NOT NULL
@@ -40,7 +40,7 @@ Bid: bid_id int PRIMARY KEY
  bid_price int NOT NULL
  bid_status VARCHAR(20) NOT NULL
  
-Car_product: product_id int PRIMARY KEY
+*Car_product: product_id int PRIMARY KEY
  kota_id int NOT NULL FOREIGN KEY
  brand VARCHAR(40) NOT NULL
  model VARCHAR(40) NOT NULL
@@ -49,7 +49,7 @@ Car_product: product_id int PRIMARY KEY
  price int NOT NULL
  date_post DATE NOT NULL
  
-Location: kota_id int PRIMARY KEY
+*Location: kota_id int PRIMARY KEY
  nama_kota VARCHAR(40) NOT NULL
  kordinat POINT NOT NULL
 
