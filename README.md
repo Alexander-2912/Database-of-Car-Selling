@@ -1,11 +1,13 @@
 # Database-of-Car-Selling
 
-Project Objective.
+## Project Objective.
 Objektif dari projek yang dibuat adalah membangun sebuah relational database untuk sebuah website yang menawarkan penjualan mobil bekas. Dalam pembuatannya, terdapat fitur-fitur dan batasan yang ada untuk diikuti. Hasil akhir dari projek ini adalah terciptanya relational database yang sudah berisi dummy dataset serta analisis sederhana terhadap data-data tersebut.
-Designing the Database
+
+## Designing the Database
 Dalam mendesain database, terdapat tahap-tahap perancangan yang perlu diikuti, yaitu:
 1. Mission Statement
 Dalam tahap ini, diperlukan pemahaman terhadap database yang akan dibuat, seperti fitur, batasan, hingga tujuan dari pembuatan database itu sendiri. Dalam pembuatan database kali ini, terdapat beberapa fitur dan batasannya, misalnya adalah setiap user dapat menawarkan produk yang dimilikinya lebih dari satu, setiap user harus mengisi data diri user terlebih dahulu, user dapat mencari mobil berdasarkan kriteria-kriteria, dan lain-lain. Setelah memahami hal tersebut, maka anda mendapat insight mengenai object-object (tabel) apa saja yang perlu dibuat.
+
 2. Creating Table Structures
 Dalam tahap ini, desain anda sudah memiliki tabel, kolom, beserta key. Pada pembuatan database kali ini, terdapat 4 buah tabel, yaitu tabel seller, tabel bid, tabel car_product, dan tabel location.
 Seller: Tabel ini berisi product_id untuk menyimpan id produk yang dijual seller, kota_id untuk menyimpan id kota seller, seller_id untuk menyimpan id seller, nama untuk menyimpan nama seller, email untuk menyimpan email seller, dan no_telp untuk menyimpan nomor telepon seller.
@@ -28,6 +30,7 @@ Seller: seller_id int NOT NULL
  nama VARCHAR(40) NOT NULL
  email VARCHAR(40) NOT NULL
  no_telp VARCHAR(40) NOT NULL
+ 
 Bid: bid_id int PRIMARY KEY
  user_id int NOT NULL
  product_id int NOT NULL FOREIGN KEY
@@ -35,6 +38,7 @@ Bid: bid_id int PRIMARY KEY
  price int NOT NULL
  bid_price int NOT NULL
  bid_status VARCHAR(20) NOT NULL
+ 
 Car_product: product_id int PRIMARY KEY
  kota_id int NOT NULL FOREIGN KEY
  brand VARCHAR(40) NOT NULL
@@ -43,6 +47,7 @@ Car_product: product_id int PRIMARY KEY
  year int NOT NULL
  price int NOT NULL
  date_post DATE NOT NULL
+ 
 Location: kota_id int PRIMARY KEY
  nama_kota VARCHAR(40) NOT NULL
  kordinat POINT NOT NULL
@@ -51,7 +56,8 @@ Location: kota_id int PRIMARY KEY
 Tahap terakhir dalam mendesain database adalah membuat sebuah Entity Relationship Diagram atau yang sering disebut juga dengan ERD. Fungsi dari Entity Relationship Diagram adalah untuk menunjukkan tabel, field, relasi, key, serta constraint yang telah dibuat pada tahap sebelumnya.
 Setelah membuat Entity Relationship Diagram, kita dapat mulai menggunakan Data Definition Language di pgAdmin4 untuk membuat tabel, field, relasi, key, dan constraint yang konsepnya sudah dibuat dalam bentuk ERD.
 Setelah kita membuat query Data Definition Language, query-query tersebut dapat kita run dan kemudian akan terbentuk tabel-tabel beserta dengan atributnya.
-Populating the Database
+
+## Populating the Database
 Selanjutnya adalah membuat dummy dataset, terdapat beberapa cara untuk membuat dummy data, diantaranya adalah menggunakan website data generator atau python. Pada pembuatan database kali ini, saya menggunakan website data generator, yaitu https://www.mockaroo.com/.
 Setelah mendapatkan data dari website tersebut, dummy datasetnya dapat dipindahkan kedalam Visual Studio Code menggunakan bahasa pemrograman Python untuk kemudian dijadikan kedalam bentuk csv. Masukkan dummy data tersebut kedalam sebuah list, urutan dan tipe data berpengaruh dalam pembuatannya.
 Setelah memasukkan semua dataset, selanjutnya kita akan mengubah kumpulan data tersebut menjadi csv menggunakan library pandas.
