@@ -61,6 +61,16 @@ Tahap terakhir dalam mendesain database adalah membuat sebuah Entity Relationshi
 ![image](https://user-images.githubusercontent.com/118685091/230657229-4d070401-55f7-47cf-9b66-747ddfb13955.png)
 
 Setelah membuat Entity Relationship Diagram, kita dapat mulai menggunakan Data Definition Language di pgAdmin4 untuk membuat tabel, field, relasi, key, dan constraint yang konsepnya sudah dibuat dalam bentuk ERD.
+
+![image](https://user-images.githubusercontent.com/118685091/230657417-8250e7be-00c0-4a9a-a02c-d70c9f48bd1d.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230657443-1f1c15f7-6851-4163-9aae-145713f4e486.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230657452-a623272f-d29b-48f0-8765-f4d491806a2a.png)
+
+![image](https://user-images.githubusercontent.com/118685091/230657476-2394946c-bb5f-49a7-8a1f-f333138c6d10.png)
+
+
 Setelah kita membuat query Data Definition Language, query-query tersebut dapat kita run dan kemudian akan terbentuk tabel-tabel beserta dengan atributnya.
 
 ## Populating the Database
