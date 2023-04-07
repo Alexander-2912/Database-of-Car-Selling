@@ -75,17 +75,46 @@ Setelah kita membuat query Data Definition Language, query-query tersebut dapat 
 
 ## Populating the Database
 Selanjutnya adalah membuat dummy dataset, terdapat beberapa cara untuk membuat dummy data, diantaranya adalah menggunakan website data generator atau python. Pada pembuatan database kali ini, saya menggunakan website data generator, yaitu https://www.mockaroo.com/.
+
 Setelah mendapatkan data dari website tersebut, dummy datasetnya dapat dipindahkan kedalam Visual Studio Code menggunakan bahasa pemrograman Python untuk kemudian dijadikan kedalam bentuk csv. Masukkan dummy data tersebut kedalam sebuah list, urutan dan tipe data berpengaruh dalam pembuatannya.
+
+![image](https://user-images.githubusercontent.com/118685091/230657607-4b9ff5c2-68fc-4e48-8101-1ded817d4c3c.png)
+
 Setelah memasukkan semua dataset, selanjutnya kita akan mengubah kumpulan data tersebut menjadi csv menggunakan library pandas.
+
+![image](https://user-images.githubusercontent.com/118685091/230657626-4d766d05-43f5-4649-8cf4-2612ba8a87d5.png)
+
 Setelah melakukan running program, maka akan muncul file csv didalam folder yang sama dimana kita menyimpan file python tersebut.
+
+![image](https://user-images.githubusercontent.com/118685091/230657647-2866ffc4-0e7d-49fb-8881-b9b0da0590f1.png)
+
 Kemudian, kita dapat kembali ke pgAdmin4 untuk mulai mengimport file-file csv tersebut kedalam tabel-tabel yang telah kita buat di tahap sebelumnya. Untuk memasukkan dataset yang telah kita buat, kita perlu mencari tabel di database yang digunakan. Klik database, kemudian schemas, dan tables, maka akan muncul tabel-tabel yang ada.
+
+![image](https://user-images.githubusercontent.com/118685091/230657670-ff8bf4d1-67bb-4c0b-84ed-fe228ae6d7cc.png)
+
 Kemudian, right click pada tabel yang ingin kita masukkan datanya dan pilih import/export file.
+
+![image](https://user-images.githubusercontent.com/118685091/230657681-65f419d7-a410-4264-9223-e047a850010a.png)
+
 Setelah ditekan, akan muncul notifikasi seperti berikut.
+
+![image](https://user-images.githubusercontent.com/118685091/230657694-b0ee7cd8-b9e9-45cb-b198-2999cd938255.png)
+
 pada bagian Filename, kita pilih file yang sesuai dengan tabel yang ingin diimport datanya. Pada contoh diatas, saya ingin memasukkan data pada tabel bid, maka saya memilih file csv yang berisi dengan data-data tabel bid. Apabila sudah sesuai, maka tekan OK.
+
+![image](https://user-images.githubusercontent.com/118685091/230657723-11e679ab-f8b2-4b80-ae4b-ff75d47e0d61.png)
+
 Setelah ditekan OK, maka akan muncul notifikasi untuk melihat proses import data, apabila ditekan akan muncul seperti gambar diatas. Pada bagian object, dapat dilihat file yang kita import kan. Pada bagian status, dapat dilihat status import kita. Apabila berhasil, maka akan tertulis "Finished".
+
+![image](https://user-images.githubusercontent.com/118685091/230657754-9fa8b349-c876-4edd-8c48-447cfb2cb104.png)
+
 Kita dapat menggunakan query diatas untuk melihat isi keseluruhan dari tabel kita.
+
+![image](https://user-images.githubusercontent.com/118685091/230657774-04bb9769-1a7b-4545-bf05-7a4997b814b7.png)
+
 Sebagai contoh, gambar diatas adalah hasil dari query (Select * From seller). Query tersebut menunjukkan isi dari tabel seller.
-Retrieve Data
+
+## Retrieve Data
 Retrieve data atau pengambilan data adalah proses mengidentifikasi dan mengekstraksi data dari basis data, berdasarkan kueri yang diberikan oleh pengguna atau aplikasi. Retrieve data dibagi menjadi 2, yaitu transactional query dan analytical query
 1. Transactional Query
 Query dibawah digunakan untuk menampilkan kolom product_id, brand, model, year, dan price dari tabel car_product dengan kriteria year lebih besar sama dengan 2015.
