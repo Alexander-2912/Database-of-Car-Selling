@@ -35,11 +35,11 @@ ORDER BY avg_car_city ASC;
 
 --No 3
 SELECT 	model, 
-		user_id, 
-		bid_date as first_bid_date,
-		LEAD(bid_date,1) OVER(PARTITION BY bid_date ORDER BY bid_date) as next_bid_date,
-		bid.price as first_bid_price,
-		LEAD(bid.price,1) OVER(PARTITION BY bid_date ORDER BY bid.price) as next_bid_price
+	user_id, 
+	bid_date as first_bid_date,
+	LEAD(bid_date,1) OVER(PARTITION BY bid_date ORDER BY bid_date) as next_bid_date,
+	bid.price as first_bid_price,
+	LEAD(bid.price,1) OVER(PARTITION BY bid_date ORDER BY bid.price) as next_bid_price
 FROM bid
 JOIN car_product
 	ON bid.product_id = car_product.product_id
@@ -52,8 +52,8 @@ FROM car_product
 GROUP BY model;
 
 SELECT	car_product.model,
-		AVG(car_product.price) as avg_price,
-		AVG(bid_price) as avg_bid_6month
+	AVG(car_product.price) as avg_price,
+	AVG(bid_price) as avg_bid_6month
 FROM bid
 JOIN car_product
   ON car_product.product_id = bid.product_id
